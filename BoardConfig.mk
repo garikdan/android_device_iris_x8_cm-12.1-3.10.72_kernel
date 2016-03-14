@@ -74,12 +74,13 @@ BOARD_CUSTOM_BOOTIMG := true
 EXTENDED_FONT_FOOTPRINT := true
 
 # recovery TWRP
-DEVICE_RESOLUTION := 720x1280
+BOARD_HAS_NO_SELECT_BUTTON := true
 # TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/twrp.fstab
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/recovery.fstab
 TARGET_PREBUILT_RECOVERY_KERNEL := $(LOCAL_PATH)/kernel
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0/gadget/lun%d/file
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_THEME := portrait_hdpi
 TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
