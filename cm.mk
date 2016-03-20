@@ -6,11 +6,6 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 $(call inherit-product, device/fly/IQ4511/device_IQ4511.mk)
 
-# set locales & aapt config.
-PRODUCT_LOCALES := ru_RU en_US
-PRODUCT_AAPT_CONFIG := normal hdpi nodpi
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
