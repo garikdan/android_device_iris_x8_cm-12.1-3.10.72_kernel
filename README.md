@@ -7,10 +7,10 @@ MTK
   * Dual SIM 
   * Audio
   * Sensors
+  * Wifi
   * MTP, ADB etc.
   
 * Not Working
-  * Wifi
   * Bluetooth
   * Camera
   * GPS
