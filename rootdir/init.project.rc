@@ -3,7 +3,12 @@ import init.mt6592.usb.rc
 
 on post-fs-data
 
-#Camera
-    chmod 0660 /dev/BU6424AF
-    chown system camera /dev/BU6424AF
+	#Camera
 
+    chmod 0660 /dev/BU6424AF
+    chmod 0660 /dev/DW9714AF
+    chmod 0660 /dev/DW9718AF    
+
+    chown system camera /dev/BU6424AF
+    chown system camera /dev/DW9714AF
+    chown system camera /dev/DW9718AF    

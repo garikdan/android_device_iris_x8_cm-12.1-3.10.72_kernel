@@ -10,16 +10,13 @@ on init
 
     export LD_PRELOAD "/system/lib/libxlog.so /system/lib/libmt6592.so"
 
-# See storage config details at http://source.android.com/tech/storage/
-    mkdir /storage/sdcard 0555 root root
- 
 # Support legacy paths
-    symlink storage/sdcard /sdcard
-    symlink storage/sdcard /mnt/sdcard
+    symlink /sdcard /mnt/sdcard
+    symlink /sdcard /storage/sdcard0
 
-# By default, primary storage is physical
+    # if primary storage is physical, set ro.vold.primary_physical to 1
     setprop ro.vold.primary_physical 1
-    
+
     mkdir /protect_f 0771 system system
     mkdir /protect_s 0771 system system
 
