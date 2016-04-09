@@ -18,7 +18,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += \
 	Torch \
-	YGPS
+	Snap
 
 PRODUCT_PACKAGES += \
     libxlog
@@ -72,12 +72,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/enableswap.sh:root/enableswap.sh \
     $(LOCAL_PATH)/rootdir/factory_init.rc:root/factory_init.rc \
 	$(LOCAL_PATH)/rootdir/init.recovery.mt6592.rc:root/init.recovery.mt6592.rc \
-    $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/recovery.fstab \
+    $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab \
     $(LOCAL_KERNEL):kernel
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/platform.xml:system/etc/permissions/platform.xml \
+    $(LOCAL_PATH)/configs/permissions/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
+	$(LOCAL_PATH)/configs/permissions/platform.xml:system/etc/permissions/platform.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -127,18 +128,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
 	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/permissions/media_codecs.xml \
 	$(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
-
-# PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
-	ro.secure=0 \
-	ro.allow.mock.location=1 \
-	ro.debuggable=1 \
-	ro.zygote=zygote32 \
-	dalvik.vm.image-dex2oat-Xms=64m \
-	dalvik.vm.image-dex2oat-Xmx=64m \
-	dalvik.vm.dex2oat-Xms=64m \
-	dalvik.vm.dex2oat-Xmx=512m \
-	ro.dalvik.vm.native.bridge=0 \
-	debug.atrace.tags.enableflags=0
 
 PRODUCT_PROPERTY_OVERRIDES := \
 	persist.sys.timezone=Europe/Moscow \
