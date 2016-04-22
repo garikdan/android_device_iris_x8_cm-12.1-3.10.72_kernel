@@ -28,6 +28,8 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    audio.primary.mt6592 \
+    audio_policy.default \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
@@ -59,6 +61,11 @@ PRODUCT_PACKAGES += libmt6592
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=MediaTekRIL
+
+# GPS
+$(call inherit-product, device/common/gps/gps_us_supl.mk)
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
 
 # Rootdir
 PRODUCT_COPY_FILES += \
