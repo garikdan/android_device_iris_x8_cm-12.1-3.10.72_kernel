@@ -62,6 +62,10 @@ PRODUCT_PACKAGES += libmt6592
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=MediaTekRIL
 
+PRODUCT_PACKAGES += \
+    gsm0710muxd \
+    gsm0710muxdmd2
+
 # GPS
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 PRODUCT_COPY_FILES += \
