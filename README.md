@@ -9,11 +9,12 @@ MTK
   * Sensors
   * Wifi
   * MTP, ADB etc.
-  
-* Not Working
   * Bluetooth
   * Camera
+
+* Not Working
   * GPS
+  * FM-Radio
  
 * Sync CyanogenMod source:
 
