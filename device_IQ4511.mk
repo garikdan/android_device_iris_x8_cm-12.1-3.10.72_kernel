@@ -18,6 +18,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += \
 	Torch \
+	FMRadio \
 	Snap
 
 PRODUCT_PACKAGES += \
@@ -76,7 +77,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.mt6592:root/fstab.mt6592 \
     $(LOCAL_PATH)/rootdir/init.recovery.mt6592.rc:recovery/root/init.recovery.mt6592.rc \
     $(LOCAL_PATH)/rootdir/init.mt6592.rc:root/init.mt6592.rc \
-    $(LOCAL_PATH)/rootdir/init.project.rc:root/init.project.rc \
     $(LOCAL_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
     $(LOCAL_PATH)/rootdir/ueventd.mt6592.rc:root/ueventd.mt6592.rc \
     $(LOCAL_PATH)/rootdir/init.mt6592.usb.rc:root/init.mt6592.usb.rc \
