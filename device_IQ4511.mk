@@ -19,7 +19,6 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PACKAGES += \
 	Torch \
 	FMRadio \
-	Snap
 
 PRODUCT_PACKAGES += \
     libxlog
