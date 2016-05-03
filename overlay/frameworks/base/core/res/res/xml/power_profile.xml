@@ -27,9 +27,10 @@
     <item name="cpu.idle">2.0</item>
     <array name="cpu.active">
         <value>120</value>
-        <value>98</value>
-        <value>75</value>
-        <value>49</value>
+        <value>102</value>
+        <value>90</value>
+        <value>78</value>
+        <value>63</value>
     </array>
     <item name="battery.capacity">1920</item>
     <array name="wifi.batchedscan">

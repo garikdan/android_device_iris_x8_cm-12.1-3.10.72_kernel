@@ -1,4 +1,6 @@
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
+$(call inherit-product, build/target/product/full.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 $(call inherit-product-if-exists, vendor/fly/IQ4511/j608_fly-vendor.mk)
 
@@ -138,6 +140,10 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/media_codecs2.xml:system/etc/media_codecs2.xml \
 	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
 	$(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
+
+# USB
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp
 
 PRODUCT_PROPERTY_OVERRIDES := \
 	persist.sys.timezone=Europe/Moscow \
