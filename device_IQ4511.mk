@@ -1,5 +1,3 @@
-$(call inherit-product, build/target/product/full.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 $(call inherit-product-if-exists, vendor/fly/IQ4511/j608_fly-vendor.mk)
@@ -26,6 +24,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libxlog
 
+# Lights
 PRODUCT_PACKAGES += \
     lights.mt6592
 
@@ -89,7 +88,6 @@ PRODUCT_COPY_FILES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
 	$(LOCAL_PATH)/configs/permissions/platform.xml:system/etc/permissions/platform.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
@@ -136,8 +134,18 @@ PRODUCT_PACKAGES += \
     libnl_2 \
     libtinyxml
 
+# FMRadio
+# PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmcust \
+    libfmjni \
+    libfmmt6620 \
+    libfmmt6627 \
+    libfmmt6628 \
+    libfmmt6630 \
+    libmtkplayer
+
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/configs/media_codecs2.xml:system/etc/media_codecs2.xml \
 	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
 	$(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
@@ -149,11 +157,6 @@ PRODUCT_PROPERTY_OVERRIDES := \
 	persist.sys.timezone=Europe/Moscow \
 	persist.sys.language=ru \
 	persist.sys.country=RU \
-	ro.mediatek.version.release=ALPS.W10.24.p0 \
-	ro.mediatek.platform=MT6592 \
-	ro.mediatek.chip_ver=S01 \
-	ro.mediatek.version.branch=KK1.MP1 \
-	ro.mediatek.version.sdk=2 \
 	ro.telephony.sim.count=2 \
 	ro.allow.mock.location=0 \
 	ro.debuggable=1 \
