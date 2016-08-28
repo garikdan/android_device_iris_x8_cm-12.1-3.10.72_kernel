@@ -12,6 +12,11 @@
 bin/
 gen/
 
+# Old files
+*.~
+*.old
+*.bak
+
 # Gradle files
 .gradle/
 build/
