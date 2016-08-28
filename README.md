@@ -1,33 +1,34 @@
-----Thanks for fire855 & superdragonpt, who are contributing to the working CyanogenMod of MTK hardware(MT6592&MT6582).---
+Fly IQ4511 Tornado One
+Infinix Zero X506
+==============
 
-This is a device tree for Xiaomi Redmi_1s_TD(HM2014011) which is based on MT6582 SoC. Powered by ferhung.
-# Build
+Basic   | Spec Sheet
+-------:|:-------------------------
+CPU     | 1.4GHz Octa-Core MT6592
+GPU     | Mali-450MP2
+Memory  | 1GB RAM
+Shipped Android Version | 5.1 
+Storage | 8GB
+Battery | 1920 mAh
+Display | 5" 1280 x 720 px
+Camera  | 13MPx + 5MPx, LED Flash
 
-* init
-  Sync CyanogenMod source:
+==============
 
-        # repo init -u git://github.com/ferhung/android.git -b cm-12.1
+* Compilation
+
+	# repo init -u git://github.com/CyanogenMod/android.git -b cm-12.1
         
-        # repo sync
-
-* full build
+	# repo sync
         
-        # source build/envsetup.sh
+	# mkdir kernel && cd kernel
 
-        # brunch cm_HM2014011-userdebug
+	# git clone https://github.com/hyperion70/j608_kernel
+        
+	# cd ..
 
-# Limitations
+	# cd device/fly/IQ4511/patches
 
-Services requires root:
+	# . apply.sh
 
-`system/core/rootdir/init.rc`
-
-  * surfaceflinger depends on sched_setscheduler calls, unable to change process priority from 'system' user (default user 'system')
-
-  * mediaserver depends on /data/nvram folder access, unable to do voice calls from 'media' user (default user 'media')
-
-# In China, we must skip to get 204 from Google server.
-  * Change of Android 5.1 source to skip network validation in some environment like China can't connect to http://clients3.google.com/generate_204. 
-
-  To see: 
-    [Skip_network_validation](http://github.com/ferhung/Skip_network_validation)
+	#. build/envsetup.sh && lunch cm_IQ4511-userdebug && mka bacon
