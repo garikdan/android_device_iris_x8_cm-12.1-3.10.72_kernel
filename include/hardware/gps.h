@@ -1392,7 +1392,6 @@ typedef struct {
      *
      * This value contains the 'bias uncertainty' in it.
      * If the data is available 'flags' must contain GPS_CLOCK_HAS_FULL_BIAS.
-
      */
     int64_t full_bias_ns;
 

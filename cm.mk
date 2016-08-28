@@ -1,15 +1,23 @@
 # Release name
-PRODUCT_RELEASE_NAME := HM2014011
+PRODUCT_RELEASE_NAME := Tornado One
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-# Inherit device configuration
-$(call inherit-product, device/Xiaomi/HM2014011/device_HM2014011.mk)
+$(call inherit-product, device/fly/IQ4511/device_IQ4511.mk)
 
-## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := HM2014011
-PRODUCT_NAME := cm_HM2014011
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := HM2014011
-PRODUCT_MANUFACTURER := Xiaomi
+# set locales & aapt config.
+PRODUCT_LOCALES := ru_RU en_US de_DE fr_FR
+PRODUCT_AAPT_CONFIG := normal nodpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
+
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := IQ4511
+PRODUCT_NAME := cm_IQ4511
+PRODUCT_BRAND := Fly
+PRODUCT_MODEL := Tornado One
+PRODUCT_MANUFACTURER := fly
