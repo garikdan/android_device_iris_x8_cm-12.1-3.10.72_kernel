@@ -1,4 +1,4 @@
-LOCAL_PATH := device/fly/IQ4511
+LOCAL_PATH := device/Lava/iris_x8
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6592
@@ -69,7 +69,7 @@ TARGET_PREBUILT_RECOVERY_KERNEL := $(LOCAL_PATH)/kernel
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/root/recovery.fstab
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/mt_usb/musb-hdrc.0/gadget/lun%d/file"
-TARGET_OTA_ASSERT_DEVICE := j608_fly,IQ4511_Octa,IQ4511
+TARGET_OTA_ASSERT_DEVICE := irisX8,irisX8,irisX8
 
 # TWRP
 DEVICE_RESOLUTION := 720x1280

@@ -1,7 +1,7 @@
 #!/bin/sh
 
-VENDOR=fly
-DEVICE=IQ4511
+VENDOR=Lava
+DEVICE=iris_x8
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 

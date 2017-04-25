@@ -29,27 +29,27 @@ Based on Stock Lollipop kernel (3.10.72)
 # Not Working
   * All work !
   
-  # Credits/Thanks to:-
+# Credits/Thanks to:-
   * Hyperin70
   * Ferhung
   * CyanogenMod Team
 
 ==============
 
-* Compilation
+# Compilation
 
-	# repo init -u git://github.com/CyanogenMod/android.git -b cm-12.1
+	* repo init -u git://github.com/CyanogenMod/android.git -b cm-12.1
         
-	# repo sync
+	* repo sync
         
-	# mkdir kernel && cd kernel
+	* mkdir kernel && cd kernel
 
-	# git clone https://github.com/hyperion70/j608_kernel
+	* git clone https://github.com/hyperion70/j608_kernel
         
-	# cd ..
+	* cd ..
 
-	# cd device/fly/IQ4511/patches
+	* cd device/Lava/iris_x8/patches
 
-	# . apply.sh
+	* . apply.sh
 
-	#. build/envsetup.sh && lunch cm_IQ4511-userdebug && mka bacon
+	* . build/envsetup.sh && brunch cm_iris_x8-userdebug 

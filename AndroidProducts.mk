@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_IQ4511.mk
+    $(LOCAL_DIR)/device_iris_x8.mk

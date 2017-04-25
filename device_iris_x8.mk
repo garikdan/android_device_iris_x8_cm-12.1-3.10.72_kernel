@@ -5,13 +5,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/fly/IQ4511/IQ4511-vendor.mk)
+$(call inherit-product-if-exists, vendor/Lava/iris_x8/iris_x8-vendor.mk)
 
 PRODUCT_CHARACTERISTICS := default
 
-PRODUCT_PROPERTY_OVERRIDES += ro.product.locale=ru-RU
+PRODUCT_PROPERTY_OVERRIDES += ro.product.locale=en-US
 
-LOCAL_PATH := device/fly/IQ4511
+LOCAL_PATH := device/Lava/iris_x8
 
 #ifeq ($(TARGET_PREBUILT_KERNEL),)
 #	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
