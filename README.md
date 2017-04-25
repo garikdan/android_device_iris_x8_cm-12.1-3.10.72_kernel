@@ -34,8 +34,6 @@ Based on Stock Lollipop kernel (3.10.72)
   * Ferhung
   * CyanogenMod Team
 
-==============
-
 # Compilation
 
 	* repo init -u git://github.com/CyanogenMod/android.git -b cm-12.1
